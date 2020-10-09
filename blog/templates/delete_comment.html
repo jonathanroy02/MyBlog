@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Delete Comment {% endblock %}
+{% block content %}
+
+
+<h1><h1>
+<br/><br/>
+<h3> Delete comment? {{ post.comment.all }} </h3>
+<br/>
+			{{comment.body}}
+		<br/><br/>
+
+<br/>
+<div class="form-group">
+	<form method="POST">
+		{% csrf_token %}
+		
+		<button class ="btn btn-secondary">Delete comment! </button>
+</div>
+
+
+
+
+
+{% endblock %}
